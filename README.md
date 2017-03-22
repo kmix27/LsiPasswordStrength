@@ -12,5 +12,22 @@ I owe some of the concepts of this work to this great blog post from [simility](
 
 Standing on those shoulders I came up with the idea of building metrics directly from user passwords in a way that resists reverse engineering, the end goal being to allow a fraud analyst or fraud prevention software to use a password as a feature without exposing the password or user to risk of abuse.  All in the interest of enhancing fraud prevention capabilities while minimizing it's visibility to users or creating undue friction points. Encouraging better choices when it comes to creating strong passwords is a parallel goal. At the end of the day the [xkcd method](https://github.com/mroth/xkcdpass) is king.  Do that.
 
-The original dataset is vast and well worth exploring [Mark Burnett](https://xato.net/today-i-am-releasing-ten-million-passwords-b6278bbe7495#.vrat8u3oo) does a good job explaining it's purpose and his intentions behind it.       
+The original dataset is vast and well worth exploring [Mark Burnett](https://xato.net/today-i-am-releasing-ten-million-passwords-b6278bbe7495#.vrat8u3oo) does a good job explaining it's purpose and his intentions behind it.         
+
+### Usage  
+
+Run config.py this will create the directiries for the package to store the models and supporting files.
+
+``` python
+from LsiPasswordStrength.build_models import rebuild dataset
+from LSIPasswordStrength.password import *
+
+tfidf, lsi, index, freq, stats, df30k ,input_documents = rebuild_dataset(filename='10-million-combos',top_n=30000,file_type='txt')
+
+runTest('TEST PASSWORD')
+```  
+
+This example assumes you have the password dataset located in ~/.lsipw/data  
+
+
 

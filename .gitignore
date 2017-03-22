@@ -1,0 +1,20 @@
+#original dataset is TOO BIG
+10-million-combos.txt
+
+#pycach and compiled code
+__pycach__/
+*.py[cod]
+*$py.class
+
+#OSX filesystem thing
+.DS_Store
+
+#working files 
+local/
+local*
+*local*
+
+#models are huge,  don’t do it
+*.pkl
+*.model
+*.model.npy

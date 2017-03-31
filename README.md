@@ -18,14 +18,14 @@ The original dataset is vast and well worth exploring [Mark Burnett](https://xat
 
 Run config.py this will create the directiries for the package to store the models and supporting files.
 
-``` python
+```python
 from LsiPasswordStrength.build_models import rebuild dataset
 from LSIPasswordStrength.password import *
 
 tfidf, lsi, index, freq, stats, df30k ,input_documents = rebuild_dataset(filename='10-million-combos',top_n=30000,file_type='txt')
 
 runTest('TEST PASSWORD')
-```  
+``` 
 
 This example assumes you have the password dataset located in ~/.lsipw/data  
 
